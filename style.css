@@ -1,0 +1,6 @@
+.ln {
+    color:red;
+}
+.fn ::first-letter{
+    text-transform: uppercase;
+}
