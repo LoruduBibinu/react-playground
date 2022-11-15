@@ -1,12 +1,22 @@
 //const helloWorld = React.createElement('h1', {}, 'Hello world!');
 
-const firstName = 'r0ulito';
-const lastName = 'formateur';
+const firstName = 'el';
+const lastName = 'mingo';
 
+function FirstName (props) {
+ return <span> {props.text[0].toUpperCase()+props.text.slice(1)}</span>
+}
 
+function LastName (props) {
+  return <span className="red-text"> {props.text[0].toUpperCase()+props.text.slice(1)}</span>
+}
+ 
 // Solution sans bonus
-const helloWorld = <h1>Hello <span>{firstName[0].toUpperCase() + firstName.slice(1)}</span> <span className="red-text">{lastName.toUpperCase()}</span></h1>;
-
+const helloWorld = (
+<h1> Hello <FirstName text={firstName}/>
+<LastName text={lastName}/>
+  </h1>);
+ReactDOM.render(helloWorld,document.querySelector("#app"))
 
 
 /**
