@@ -3,7 +3,8 @@ function listing () {
   const card = [];
   fetch('https://jsonplaceholder.typicode.com/users')
   .then((list) => list.json())
-  .then((list) => 
+  .then((list = React.useState))
+  .then ((list) =>
     for(let {name,email,company,website,phone} of list) {
         let data = [name,email,company,website,phone]
         card.push(data);
@@ -14,7 +15,7 @@ function listing () {
   .catch((err) => {
     console.log(err.message);
   });
-return 
+return card
      }
   ReactDOM.render(
     <listing />,
