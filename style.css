@@ -1,3 +1,15 @@
 .red-text {
     color: red;
 }
+#button{
+   display: flex;
+   flex-flow: column wrap;
+  
+}
+button {
+    width : 30%;
+    margin :1rem;  
+}
+.couleur{
+    display:flex;
+}
